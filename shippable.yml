@@ -19,7 +19,11 @@ notifications:
   email:
     recipients:
       - vidya@shippable.com
-      - buildsampletest@gmail.com
+      - shipci@outlook.com
      
     on_success: always
     on_failure: always
+    
+after_success:
+- git push -f git@heroku.com:samplephpmysql.git master
+- echo "Hi"
